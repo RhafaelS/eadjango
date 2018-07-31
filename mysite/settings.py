@@ -25,7 +25,7 @@ SECRET_KEY = 'l^$j+kn=+l=z#)2y#j5+dv$1&xt(1nru3un+17#(x&*lcjd-gh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'eadjango.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'Rhafaels.pythonanywhere.com']
 
 
 # Application definition
