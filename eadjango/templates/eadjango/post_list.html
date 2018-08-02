@@ -1,11 +1,22 @@
-<html>
-	<head>
-		<title>PROJETO COM DJANGO</title>
-	</head>
-
-	<body>
-		<h1>Segura o projeto Django do garoto!</h1>
-		<p1>FUNCIONANDO!</p1>
-		<p2>WORKING!</p2>
-	</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'app_name_post_list' %}">Post Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>title</td>
+    <td>text</td>
+    <td>created_date</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.title }}</td>
+    <td>{{ object.text }}</td>
+    <td>{{ object.created_date }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'app_name_post_create' %}">Create new Post</a>
+{% endblock %}
