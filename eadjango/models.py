@@ -29,8 +29,8 @@ class Post(models.Model):
         return u'%s' % self.pk
 
     def get_absolute_url(self):
-        return reverse('app_name_post_detail', args=(self.pk,))
+        return reverse('eadjango_post_detail', args=(self.pk,))
 
 
     def get_update_url(self):
-        return reverse('app_name_post_update', args=(self.pk,))
+        return reverse('eadjango_post_update', args=(self.pk,))
